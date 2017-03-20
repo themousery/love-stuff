@@ -20,6 +20,7 @@ function Asteroid:update(i)
     player.hp = player.hp - 1
     hit:play()
     table.remove(asteroids, i)
+    bleed = true
   end
   if self.y > love.graphics.getWidth() then
     table.remove(asteroids, i)

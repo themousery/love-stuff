@@ -30,3 +30,29 @@ function Laser:draw()
   love.graphics.rectangle("fill", self.x, self.y, 3, 10)
   love.graphics.setColor(255,255,255)
 end
+
+-- HORRIBLY inneficient, I know
+
+ALaser = {}
+
+function ALaser:new(x,y)
+  o = {}
+  setmetatable(o,self)
+  self.__index = self
+  o.x = x
+  o.y = y
+  return o
+end
+
+function ALaser:update(i)
+  self.y = self.y + 10
+  if self.y > love.graphics.getWidth() then
+    table.remove(alasers,i)
+  end
+end
+
+function ALaser:draw()
+  love.graphics.setColor(200, 75, 10)
+  love.graphics.rectangle("fill", self.x, self.y, 3, 10)
+  love.graphics.setColor(255,255,255)
+end
