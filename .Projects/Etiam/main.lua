@@ -76,13 +76,18 @@ function love.keypressed(key)
       love.mouse.setVisible(pause)
     end
   end
+  -- if key == "space" and mode == "arcadeGame" and not pause and not slomo then
+  --   table.insert(lasers,Laser:new(mouseX-2,mouseY,1))
+  --   laser_sound:rewind()
+  --   laser_sound:play()
+  -- end
   if key == "a" then
     love.event.quit()
   end
 end
 
 function love.mousepressed()
-  if mode == "arcadeGame" and not pause and not dead then
+  if mode == "arcadeGame" and not pause and not slomo then
     table.insert(lasers,Laser:new(mouseX-2,mouseY,1))
     laser_sound:rewind()
     laser_sound:play()

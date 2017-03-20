@@ -39,7 +39,7 @@ function collisions()
         end
       end
     else
-      if colliderect(laser.x,laser.y,3,10,player.x,player.y,44,70) and not dead then
+      if colliderect(laser.x,laser.y,3,10,player.x,player.y,44,70) and not slomo then
         table.remove(lasers,i)
         player.hp = player.hp - 1
         bleed = true
@@ -49,7 +49,7 @@ function collisions()
     end
   end
   for i,asteroid in ipairs(asteroids) do
-    if colliderect(asteroid.x,asteroid.y,asteroid.img:getWidth(),asteroid.img:getHeight(),player.x,player.y,44,70) and not dead then
+    if colliderect(asteroid.x,asteroid.y,asteroid.img:getWidth(),asteroid.img:getHeight(),player.x,player.y,44,70) and not slomo then
       table.remove(asteroids,i)
       player.hp = player.hp - 1
       bleed = true
@@ -58,7 +58,7 @@ function collisions()
     end
   end
   for i,heart in ipairs(powerups) do
-    if colliderect(heart.x,heart.y,32,30,player.x,player.y,44,70) and not dead then
+    if colliderect(heart.x,heart.y,32,30,player.x,player.y,44,70) and not slomo then
       table.remove(powerups,i)
       player.hp = player.hp + 1
       powerup_sound:rewind()
