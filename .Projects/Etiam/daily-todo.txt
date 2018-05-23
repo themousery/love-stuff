@@ -1,8 +1,0 @@
-pending:
--add mega-laser powerup, lasts for 5 seconds, one hit kills aliens
-
-3/19/2017 - so sore today - all of this was MUCH easier than I thought it would be
--fix menu buttons so they are triggered by love.mousereleased, rather than love.mouse.isdown -DONE
--add explosions, so that enemies explode when they die, asteroids too -DONE
--add game over screen to arcade mode -DONE
--make slow motion death smoother -DONE
