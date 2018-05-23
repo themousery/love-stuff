@@ -1,9 +1,0 @@
-tutorial done? - boolean
-music - int
-sfx - int
-controls.up - string
-controls.left - string
-controls.down - string
-controls.right - string
-controls.fire - string
-controls.select - string

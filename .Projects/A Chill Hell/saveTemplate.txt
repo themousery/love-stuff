@@ -1,0 +1,5 @@
+name (string)
+monies (integer)
+tutorial done (boolean)
+money per click (integer)
+auto money per second (integer)
